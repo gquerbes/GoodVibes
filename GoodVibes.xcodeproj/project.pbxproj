@@ -1,0 +1,292 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		74FC2BB41C9D879A00909738 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FC2BB31C9D879A00909738 /* AppDelegate.swift */; };
+		74FC2BB61C9D879A00909738 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FC2BB51C9D879A00909738 /* ViewController.swift */; };
+		74FC2BB91C9D879A00909738 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74FC2BB71C9D879A00909738 /* Main.storyboard */; };
+		74FC2BBB1C9D879A00909738 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74FC2BBA1C9D879A00909738 /* Assets.xcassets */; };
+		74FC2BBE1C9D879A00909738 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74FC2BBC1C9D879A00909738 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		74FC2BB01C9D879A00909738 /* GoodVibes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodVibes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		74FC2BB31C9D879A00909738 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		74FC2BB51C9D879A00909738 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		74FC2BB81C9D879A00909738 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		74FC2BBA1C9D879A00909738 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		74FC2BBD1C9D879A00909738 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		74FC2BBF1C9D879A00909738 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		74FC2BAD1C9D879A00909738 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		74FC2BA71C9D879A00909738 = {
+			isa = PBXGroup;
+			children = (
+				74FC2BB21C9D879A00909738 /* GoodVibes */,
+				74FC2BB11C9D879A00909738 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		74FC2BB11C9D879A00909738 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74FC2BB01C9D879A00909738 /* GoodVibes.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		74FC2BB21C9D879A00909738 /* GoodVibes */ = {
+			isa = PBXGroup;
+			children = (
+				74FC2BB31C9D879A00909738 /* AppDelegate.swift */,
+				74FC2BB51C9D879A00909738 /* ViewController.swift */,
+				74FC2BB71C9D879A00909738 /* Main.storyboard */,
+				74FC2BBA1C9D879A00909738 /* Assets.xcassets */,
+				74FC2BBC1C9D879A00909738 /* LaunchScreen.storyboard */,
+				74FC2BBF1C9D879A00909738 /* Info.plist */,
+			);
+			path = GoodVibes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		74FC2BAF1C9D879A00909738 /* GoodVibes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74FC2BC21C9D879A00909738 /* Build configuration list for PBXNativeTarget "GoodVibes" */;
+			buildPhases = (
+				74FC2BAC1C9D879A00909738 /* Sources */,
+				74FC2BAD1C9D879A00909738 /* Frameworks */,
+				74FC2BAE1C9D879A00909738 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoodVibes;
+			productName = GoodVibes;
+			productReference = 74FC2BB01C9D879A00909738 /* GoodVibes.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		74FC2BA81C9D879A00909738 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "The Modern Tech";
+				TargetAttributes = {
+					74FC2BAF1C9D879A00909738 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = P2PHUV57V5;
+					};
+				};
+			};
+			buildConfigurationList = 74FC2BAB1C9D879A00909738 /* Build configuration list for PBXProject "GoodVibes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 74FC2BA71C9D879A00909738;
+			productRefGroup = 74FC2BB11C9D879A00909738 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				74FC2BAF1C9D879A00909738 /* GoodVibes */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		74FC2BAE1C9D879A00909738 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74FC2BBE1C9D879A00909738 /* LaunchScreen.storyboard in Resources */,
+				74FC2BBB1C9D879A00909738 /* Assets.xcassets in Resources */,
+				74FC2BB91C9D879A00909738 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		74FC2BAC1C9D879A00909738 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74FC2BB61C9D879A00909738 /* ViewController.swift in Sources */,
+				74FC2BB41C9D879A00909738 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		74FC2BB71C9D879A00909738 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74FC2BB81C9D879A00909738 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		74FC2BBC1C9D879A00909738 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74FC2BBD1C9D879A00909738 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		74FC2BC01C9D879A00909738 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		74FC2BC11C9D879A00909738 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		74FC2BC31C9D879A00909738 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GoodVibes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.themoderntech.GoodVibes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		74FC2BC41C9D879A00909738 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GoodVibes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.themoderntech.GoodVibes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		74FC2BAB1C9D879A00909738 /* Build configuration list for PBXProject "GoodVibes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74FC2BC01C9D879A00909738 /* Debug */,
+				74FC2BC11C9D879A00909738 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74FC2BC21C9D879A00909738 /* Build configuration list for PBXNativeTarget "GoodVibes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74FC2BC31C9D879A00909738 /* Debug */,
+				74FC2BC41C9D879A00909738 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 74FC2BA81C9D879A00909738 /* Project object */;
+}

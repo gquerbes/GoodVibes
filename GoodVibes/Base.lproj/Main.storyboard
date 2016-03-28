@@ -239,7 +239,6 @@
                                 </constraints>
                                 <state key="normal" title="Log in"/>
                                 <connections>
-                                    <action selector="btnLogin:" destination="Rkb-4D-hxI" eventType="touchUpInside" id="i7T-YZ-uMM"/>
                                     <segue destination="CFF-qA-IKf" kind="show" identifier="login" id="sb9-MW-Y4t"/>
                                 </connections>
                             </button>

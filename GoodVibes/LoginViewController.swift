@@ -34,32 +34,29 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func btnLogin(sender: AnyObject) {
-        let alert = UIAlertController(title: "", message: "", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-        PFUser.logInWithUsernameInBackground(txtUsername.text!, password: txtPassword.text!){
+   
+    
+    
+    func login(){
+       PFUser.logInWithUsernameInBackground(txtUsername.text!, password: txtPassword.text!){
             (user: PFUser?, error:NSError?) -> Void in
             if user != nil{
-               print("success!")
-                alert.title = "Success!"
-                alert.message = "You are now signed in"
+                print("success!")
                 variables.user = user
             }
                 
             else{
-                print("Access Denied")
-                alert.title = "Error"
                 //get error retured by database and set message
                 if let error = error {
                     let errorString = error.userInfo["error"] as? String
-                    alert.message = errorString
+                    print(errorString)
+                    //variables.user = nil
+                    
                 }
             }
         }
-       // self.presentViewController(alert, animated: true, completion: nil)
         
-            
-        
+        // self.presentViewController(alert, animated: true, completion: nil
     }
     
     func dismissKeyboard() {
@@ -75,19 +72,20 @@ class LoginViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        login()
         if segue.identifier == "login"{
             if variables.user != nil{
-                let user = variables.user
                 let controller = (segue.destinationViewController ) as! AccountViewController
-                controller.user = user
+                controller.user = variables.user
             }
             else{
-                let alert = UIAlertController(title: "", message: "", preferredStyle: UIAlertControllerStyle.Alert)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-
-                alert.title = "error"
-                alert.message = "Invalid Account"
-                self.presentViewController(alert, animated: true, completion: nil)
+                print("user is nil")
+//                let alert = UIAlertController(title: "", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+//                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+//
+//                alert.title = "error"
+//                alert.message = "Invalid Account"
+//                self.presentViewController(alert, animated: true, completion: nil)
                 
             }
         }

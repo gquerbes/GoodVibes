@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7457A52A1CA8E13D00A3B144 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457A5291CA8E13D00A3B144 /* AccountViewController.swift */; };
 		74F9E28E1CA8A9A40014689E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F9E28D1CA8A9A40014689E /* Parse.framework */; };
 		74F9E2901CA8A9AF0014689E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F9E28F1CA8A9AF0014689E /* Bolts.framework */; };
 		74F9E2931CA8AA8A0014689E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F9E2921CA8AA8A0014689E /* AudioToolbox.framework */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7457A5291CA8E13D00A3B144 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		74F9E28D1CA8A9A40014689E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		74F9E28F1CA8A9AF0014689E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		74F9E2921CA8AA8A0014689E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -116,6 +118,7 @@
 				74FC2BB31C9D879A00909738 /* AppDelegate.swift */,
 				74FC2BB51C9D879A00909738 /* ViewController.swift */,
 				74FC2BB71C9D879A00909738 /* Main.storyboard */,
+				7457A5291CA8E13D00A3B144 /* AccountViewController.swift */,
 				74FC2BBA1C9D879A00909738 /* Assets.xcassets */,
 				74FC2BBC1C9D879A00909738 /* LaunchScreen.storyboard */,
 				74FC2BBF1C9D879A00909738 /* Info.plist */,
@@ -197,6 +200,7 @@
 			files = (
 				74F9E2A91CA8B7730014689E /* LoginViewController.swift in Sources */,
 				74FC2BB61C9D879A00909738 /* ViewController.swift in Sources */,
+				7457A52A1CA8E13D00A3B144 /* AccountViewController.swift in Sources */,
 				74FC2BB41C9D879A00909738 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

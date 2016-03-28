@@ -26,10 +26,13 @@ class ViewController: UIViewController {
         testObject.saveInBackgroundWithBlock { (success, error) -> Void in
             print("Object has been saved.")
         }
+        //Looks for single or multiple taps.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
     
     @IBAction func btnCreateAccount(sender: AnyObject) {
-        var user = PFUser()
+        let user = PFUser()
         user.username = txtUsername.text
         user.password = txtPassword.text
         user.email = txtEmailAddress.text
@@ -50,6 +53,10 @@ class ViewController: UIViewController {
 
     }
     
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

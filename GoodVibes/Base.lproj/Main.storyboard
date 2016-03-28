@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Create New Account-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GoodVibes" customModuleProvider="target" sceneMemberID="viewController">
@@ -140,7 +140,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IoJ-S5-4PS" secondAttribute="bottom" constant="89" id="xJc-ID-pdP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="5f0-3J-wLB"/>
+                    <navigationItem key="navigationItem" title="Create New Account" id="5f0-3J-wLB"/>
                     <connections>
                         <outlet property="txtEmailAddress" destination="aaD-Es-d9F" id="NBh-FE-A6g"/>
                         <outlet property="txtPassword" destination="1ff-Td-08c" id="zgO-CR-qoE"/>
@@ -263,7 +263,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pph-Vx-Xzz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1742" y="387"/>
+            <point key="canvasLocation" x="1990" y="375"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Eyk-zu-pVT">

@@ -33,12 +33,17 @@ class LoginViewController: UIViewController {
             if user != nil{
                print("success!")
                 alert.title = "Success!"
-                alert.message = "You are now logged in."
+                alert.message = "You are now signed in"
+                
             }
             else{
                 print("Access Denied")
                 alert.title = "Error"
-                alert.message = "Access Denied"
+                //get error retured by database and set message
+                if let error = error {
+                    let errorString = error.userInfo["error"] as? String
+                    alert.message = errorString
+                }
             }
         }
         self.presentViewController(alert, animated: true, completion: nil)

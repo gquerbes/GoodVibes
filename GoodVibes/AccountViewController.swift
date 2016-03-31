@@ -13,10 +13,13 @@ class AccountViewController: UIViewController {
 
     @IBOutlet weak var lblUsername: UILabel!
     
+    var user: PFUser?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        self.configureView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,12 +27,11 @@ class AccountViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    var user: PFUser? {
-        didSet {
-            // Update the view.
-            self.configureView()
-        }
-    }
+//    struct variables{
+//        static var user: PFUser?
+//        
+//    }
+    
 
     
     func configureView(){

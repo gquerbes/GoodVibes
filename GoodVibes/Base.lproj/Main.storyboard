@@ -154,7 +154,7 @@
         <!--Account View Controller-->
         <scene sceneID="SPw-Gy-eRX">
             <objects>
-                <viewController id="CFF-qA-IKf" customClass="AccountViewController" customModule="GoodVibes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="accountView" id="CFF-qA-IKf" customClass="AccountViewController" customModule="GoodVibes" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LIa-CT-Gzr"/>
                         <viewControllerLayoutGuide type="bottom" id="6LJ-rM-qXe"/>
@@ -163,7 +163,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uV-Li-aEW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uV-Li-aEW">
                                 <rect key="frame" x="20" y="159" width="560" height="51"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -184,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bse-Tk-nEk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1665" y="1252"/>
+            <point key="canvasLocation" x="2797" y="375"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="hOW-BI-f7X">
@@ -239,7 +239,7 @@
                                 </constraints>
                                 <state key="normal" title="Log in"/>
                                 <connections>
-                                    <segue destination="CFF-qA-IKf" kind="show" identifier="login" id="sb9-MW-Y4t"/>
+                                    <action selector="btnLogin:" destination="Rkb-4D-hxI" eventType="touchUpInside" id="aeu-2B-egG"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDO-P7-zC5">
@@ -294,6 +294,7 @@
                     <connections>
                         <outlet property="txtPassword" destination="XSk-p4-MzL" id="yH0-9Z-zFl"/>
                         <outlet property="txtUsername" destination="lg7-JF-grO" id="Xj2-OG-CYe"/>
+                        <segue destination="CFF-qA-IKf" kind="show" identifier="login" id="yZd-zu-9aI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pph-Vx-Xzz" userLabel="First Responder" sceneMemberID="firstResponder"/>

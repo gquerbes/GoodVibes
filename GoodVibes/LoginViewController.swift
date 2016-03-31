@@ -14,14 +14,14 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var txtUsername: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     
-    struct variables{
-        static var user: PFUser?
+    //Variables
+    var user: PFUser?
     
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         // Do any additional setup after loading the view.
         
         //Looks for single or multiple taps
@@ -36,13 +36,18 @@ class LoginViewController: UIViewController {
     
    
     
+    @IBAction func btnLogin(sender: AnyObject) {
+        login()
+    }
+    
     
     func login(){
        PFUser.logInWithUsernameInBackground(txtUsername.text!, password: txtPassword.text!){
             (user: PFUser?, error:NSError?) -> Void in
             if user != nil{
                 print("success!")
-                variables.user = user
+                self.user = user
+                self.performSegueWithIdentifier("login", sender: self)
             }
                 
             else{
@@ -68,15 +73,14 @@ class LoginViewController: UIViewController {
     
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+//     In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        login()
         if segue.identifier == "login"{
-            if variables.user != nil{
+            if user != nil{
                 let controller = (segue.destinationViewController ) as! AccountViewController
-                controller.user = variables.user
+                controller.user = self.user
             }
             else{
                 print("user is nil")
@@ -91,6 +95,6 @@ class LoginViewController: UIViewController {
         }
         
     }
- 
+
 
 }

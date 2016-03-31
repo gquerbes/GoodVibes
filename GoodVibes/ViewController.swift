@@ -17,19 +17,39 @@ class ViewController: UIViewController {
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var txtUsername: UITextField!
     
+    var user : PFUser!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let testObject = PFObject(className: "TestObject")
-        testObject["foo"] = "bar"
-        testObject.saveInBackgroundWithBlock { (success, error) -> Void in
-            print("Object has been saved.")
-        }
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
+    
+        user = PFUser.currentUser()
+               
+        autologin()
+       
+    
     }
+    
+    func autologin(){
+        if user != nil{
+            print("you are signed in \(user?.username)")
+            dispatch_async(dispatch_get_main_queue()) {//this line makes next line work.... FML
+                self.performSegueWithIdentifier("autoLogin", sender: self)
+            }
+        }
+        else {
+            // Show the signup or login screen
+            print("you are not signed in")
+        }
+    }
+    
+    
+    
     
     @IBAction func btnCreateAccount(sender: AnyObject) {
         let user = PFUser()
@@ -61,6 +81,16 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "autoLogin"{
+            
+           
+           
+        }
+        
     }
 
 

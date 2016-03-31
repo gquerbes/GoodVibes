@@ -13,7 +13,10 @@ class AccountViewController: UIViewController {
 
     @IBOutlet weak var lblUsername: UILabel!
     
-    var user: PFUser?
+    @IBAction func btnLogout(sender: AnyObject) {
+        PFUser.logOut()
+    }
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,19 +30,10 @@ class AccountViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-//    struct variables{
-//        static var user: PFUser?
-//        
-//    }
     
 
     
     func configureView(){
-    //configure the view
-       // var query = PFQuery(className: "_user")
-        //query.getObjectInBackgroundWithId((user?.objectId)!)
-        
-        //
         PFUser.currentUser()!.fetchInBackgroundWithBlock({ (currentUser: PFObject?, error: NSError?) -> Void in
             
             // Update your data
@@ -49,6 +43,7 @@ class AccountViewController: UIViewController {
                 self.lblUsername.text = user.username
                 
             }
+            
         })
     
     }

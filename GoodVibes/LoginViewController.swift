@@ -29,6 +29,7 @@ class LoginViewController: UIViewController {
         view.addGestureRecognizer(tap)
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -37,7 +38,11 @@ class LoginViewController: UIViewController {
    
     
     @IBAction func btnLogin(sender: AnyObject) {
+        
         login()
+    }
+    
+    @IBAction func btnCreateAccount(sender: AnyObject) {
     }
     
     
@@ -55,13 +60,11 @@ class LoginViewController: UIViewController {
                 if let error = error {
                     let errorString = error.userInfo["error"] as? String
                     print(errorString)
-                    //variables.user = nil
                     
                 }
             }
         }
         
-        // self.presentViewController(alert, animated: true, completion: nil
     }
     
     func dismissKeyboard() {
@@ -80,16 +83,10 @@ class LoginViewController: UIViewController {
         if segue.identifier == "login"{
             if user != nil{
                 let controller = (segue.destinationViewController ) as! AccountViewController
-                controller.user = self.user
             }
             else{
                 print("user is nil")
-//                let alert = UIAlertController(title: "", message: "", preferredStyle: UIAlertControllerStyle.Alert)
-//                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-//
-//                alert.title = "error"
-//                alert.message = "Invalid Account"
-//                self.presentViewController(alert, animated: true, completion: nil)
+
                 
             }
         }

@@ -82,7 +82,7 @@ class LoginViewController: UIViewController {
         // Pass the selected object to the new view controller.
         if segue.identifier == "login"{
             if user != nil{
-                let controller = (segue.destinationViewController ) as! AccountViewController
+                let controller = (segue.destinationViewController ) as! UITabBarController
             }
             else{
                 print("user is nil")

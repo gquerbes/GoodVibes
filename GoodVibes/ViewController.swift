@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     }
     
     func autologin(){
-        if user != nil{
+        if user.username != nil{
             print("you are signed in \(user?.username)")
             dispatch_async(dispatch_get_main_queue()) {//this line makes next line work.... FML
                 self.performSegueWithIdentifier("autoLogin", sender: self)

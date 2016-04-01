@@ -14,6 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var txtUsername: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     
+    @IBOutlet weak var spnLogin: UIActivityIndicatorView!
     //Variables
     var user: PFUser?
     
@@ -38,8 +39,9 @@ class LoginViewController: UIViewController {
    
     
     @IBAction func btnLogin(sender: AnyObject) {
-        
+        spnLogin.startAnimating()
         login()
+        spnLogin.stopAnimating()
     }
     
     @IBAction func btnCreateAccount(sender: AnyObject) {

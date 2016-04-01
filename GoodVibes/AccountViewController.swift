@@ -17,12 +17,16 @@ class AccountViewController: UIViewController {
         PFUser.logOut()
     }
    
+    @IBOutlet weak var spnLoading: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        spnLoading.startAnimating()
         self.configureView()
+        spnLoading.stopAnimating()
+        
     }
 
     override func didReceiveMemoryWarning() {

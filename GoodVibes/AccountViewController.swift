@@ -12,6 +12,9 @@ import Parse
 class AccountViewController: UIViewController {
 
     @IBOutlet weak var lblUsername: UILabel!
+    @IBOutlet weak var lblEmail: UILabel!
+    @IBOutlet weak var lblMobileNumber: UILabel!
+    @IBOutlet weak var lblAddress: UILabel!
     
     @IBAction func btnLogout(sender: AnyObject) {
         PFUser.logOut()
@@ -19,13 +22,11 @@ class AccountViewController: UIViewController {
    
     @IBOutlet weak var spnLoading: UIActivityIndicatorView!
     
+    var user : PFUser?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        spnLoading.startAnimating()
-        self.configureView()
-        spnLoading.stopAnimating()
         
     }
 
@@ -35,21 +36,35 @@ class AccountViewController: UIViewController {
     }
     
     
-
-    
     func configureView(){
         PFUser.currentUser()!.fetchInBackgroundWithBlock({ (currentUser: PFObject?, error: NSError?) -> Void in
-            
-            // Update your data
-            
+            //if account logged in successfully, process
             if let user = currentUser as? PFUser {
+                self.user = user
                 
-                self.lblUsername.text = user.username
+                if let address = user.objectForKey("address"){
+                    let streetAddress = address.objectForKey("street_address") as! String
+                    let city = address.objectForKey("city") as! String
+                    let state = address.objectForKey("state") as! String
+                    let zip = address.objectForKey("zip") as! String
+                    
+                    self.lblUsername.text = user.username
+                    self.lblEmail.text = user.email
+                    self.lblAddress.text = "\(streetAddress), \(city) \(state), \(zip)"
+                    self.lblMobileNumber.text = user.objectForKey("mobile_number") as? String
+                }
                 
-            }
-            
-        })
+                
     
+            }
+        })
+    }
+
+    
+    override func viewWillAppear(animated: Bool) {
+        spnLoading.startAnimating()
+        configureView()
+        spnLoading.stopAnimating()
     }
     
     

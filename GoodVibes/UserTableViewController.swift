@@ -19,8 +19,11 @@ class UserTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -37,33 +40,16 @@ class UserTableViewController: UITableViewController {
         // NEED TO DEAL WITH CACHE TO STOP LONG RUNNING OPERATIONS
         
 
-        let userArray : [AnyObject]
-        var numUsers = 0
-        
-        let query = PFUser.query()
-        
-        do{
-            query?.whereKey("email", notEqualTo: "")
-            userArray = try query!.findObjects()
-            numUsers = userArray.count
-            
-            
-        }
-        catch _ {
-            
-        }
-        
-        print(numUsers)
-      
-        
-        return 0//numUsers
+                
+        return 1//numUsers
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier")//removed with identifier 
+        let cell = tableView.dequeueReusableCellWithIdentifier("userCell")//removed with identifier
 
-        cell!.textLabel?.text = "Hello"
+        cell?.textLabel!.text = "sometign"
+        
         
         return cell!
     }

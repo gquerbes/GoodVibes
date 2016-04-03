@@ -31,18 +31,22 @@ class AccountUpdateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
-        // Do any additional setup after loading the view.
+        
+        //Looks for single or multiple taps
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
     
     func configureView(){
-    
+        
+        //find current user
         PFUser.currentUser()!.fetchInBackgroundWithBlock({ (currentUser: PFObject?, error: NSError?) -> Void in
-            // Update your data     
+            // try to set user to currentUser
             if let user = currentUser as? PFUser {
                 self.user = user
                 self.txtUsername.text = user.username
                 self.txtEmail.text = user.email
-                self.txtPassword.text = "****Chage To Update****" //add functionality
+                self.txtPassword.text = "****Under Construction****" //add functionality
                 
                 //get custom attributes from user document and pass to text boxes
                 self.txtMobileNumber.text = user.objectForKey("mobile_number") as? String
@@ -58,16 +62,14 @@ class AccountUpdateViewController: UIViewController {
         })
     }
 
-    
+    //update account information
     func updateAccount(){
-        //self.user?.username = txtUsername.text
         self.user?["mobile_number"] = txtMobileNumber.text
         self.user?["address.street_address"] = txtStreetAddress.text
         self.user?["address.city"] = txtCity.text
         self.user?["address.state"] = txtState.text
         self.user?["address.zip"] = txtZip.text
-        
-        
+        //save changes
         user?.saveInBackground()
         
     }
@@ -76,6 +78,11 @@ class AccountUpdateViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //hide keyboard
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
 
     /*
     // MARK: - Navigation

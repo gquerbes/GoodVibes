@@ -37,6 +37,7 @@ class AccountViewController: UIViewController {
     
     
     func configureView(){
+        spnLoading.startAnimating()
         PFUser.currentUser()!.fetchInBackgroundWithBlock({ (currentUser: PFObject?, error: NSError?) -> Void in
             //if account logged in successfully, process
             if let user = currentUser as? PFUser {
@@ -58,13 +59,19 @@ class AccountViewController: UIViewController {
     
             }
         })
+        
+        spnLoading.stopAnimating()
     }
 
     
     override func viewWillAppear(animated: Bool) {
-        spnLoading.startAnimating()
         configureView()
-        spnLoading.stopAnimating()
+        
+        //BEGIN TEST
+      
+        
+        
+        //END TEST
     }
     
     

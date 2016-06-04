@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>server</key>
+	<string>https://goodvibes55.herokuapp.com/parse</string>
+	<key>clientKey</key>
+	<string>as8f7a3hr98fsa3hjf0s3</string>
+	<key>applicationID</key>
+	<string>GoodVibes31282h18sad2f98</string>
+</dict>
+</plist>

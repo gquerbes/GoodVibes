@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7456113E1D032F5D00C8D8FD /* Creds.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7456113D1D032F5D00C8D8FD /* Creds.plist */; };
 		7457A52A1CA8E13D00A3B144 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457A5291CA8E13D00A3B144 /* AccountViewController.swift */; };
 		7493871B1CB088A900C760A8 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7493871A1CB088A900C760A8 /* UserTableViewController.swift */; };
 		74B9C1641CAD9FED00E3D4FF /* AccountUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B9C1631CAD9FED00E3D4FF /* AccountUpdateViewController.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7456113D1D032F5D00C8D8FD /* Creds.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Creds.plist; sourceTree = "<group>"; };
 		7457A5291CA8E13D00A3B144 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		7493871A1CB088A900C760A8 /* UserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
 		74B9C1631CAD9FED00E3D4FF /* AccountUpdateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountUpdateViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			children = (
 				74F9E2A81CA8B7730014689E /* LoginViewController.swift */,
 				74FC2BB31C9D879A00909738 /* AppDelegate.swift */,
+				7456113D1D032F5D00C8D8FD /* Creds.plist */,
 				74FC2BB51C9D879A00909738 /* ViewController.swift */,
 				74FC2BB71C9D879A00909738 /* Main.storyboard */,
 				7493871A1CB088A900C760A8 /* UserTableViewController.swift */,
@@ -196,6 +199,7 @@
 			files = (
 				74FC2BBE1C9D879A00909738 /* LaunchScreen.storyboard in Resources */,
 				74FC2BBB1C9D879A00909738 /* Assets.xcassets in Resources */,
+				7456113E1D032F5D00C8D8FD /* Creds.plist in Resources */,
 				74FC2BB91C9D879A00909738 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

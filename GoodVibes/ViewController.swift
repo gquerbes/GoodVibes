@@ -88,27 +88,27 @@ class ViewController: UIViewController {
             
         }
         
-           self.setUsers(self.userArray)
+         //  self.setUsers(self.userArray)
         
     }
     
     
-    func setUsers(user: [AnyObject]){
-        print (userArray[0])
-        for index in 0...user.count{
-           // var aUser = user[index]
-            if let username = user[index].username{
-                if let email = user[index].password{
-                    let userObject = User(username: username!, email: email!)
-                    userObjectArray.append(userObject)
-                    
-                }
-                print("error1")
-                
-            }
-            print("error2")
-        }
-    }
+//    func setUsers(user: [AnyObject]){
+//        //print (userArray[0])
+//        for index in 0...user.count{
+//           // var aUser = user[index]
+//            if let username = user[index].username{
+//                if let email = user[index].password{
+//                    let userObject = User(username: username!, email: email!)
+//                    userObjectArray.append(userObject)
+//                    
+//                }
+//                print("error1")
+//                
+//            }
+//            print("error2")
+//        }
+//    }
     
     
     @IBAction func btnCreateAccount(sender: AnyObject) {
